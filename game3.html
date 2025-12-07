@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>لعبة 3</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>لعبة تغيير اللون</h1>
+    <p>اضغط على الزر لتغيير لون الخلفية!</p>
+    <button onclick="changeColor()">غير اللون</button>
+    <a href="../index.html">العودة للرئيسية</a>
+
+    <script>
+        function changeColor() {
+            const colors = ["#FF6F61", "#6B5B95", "#88B04B", "#F7CAC9"];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+    </script>
+</body>
+</html>

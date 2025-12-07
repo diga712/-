@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>لعبة 2</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>لعبة ضغط الزر</h1>
+    <p>اضغط الزر أكبر عدد ممكن خلال 5 ثواني!</p>
+    <button id="btn">اضغطني!</button>
+    <p id="score">النقاط: 0</p>
+    <a href="../index.html">العودة للرئيسية</a>
+
+    <script>
+        let score = 0;
+        const btn = document.getElementById('btn');
+        const scoreEl = document.getElementById('score');
+        btn.onclick = () => {
+            score++;
+            scoreEl.textContent = "النقاط: " + score;
+        };
+        setTimeout(() => {
+            btn.disabled = true;
+            alert("انتهى الوقت! نقاطك: " + score);
+        }, 5000);
+    </script>
+</body>
+</html>

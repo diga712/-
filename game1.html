@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>لعبة 1</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <h1>لعبة تخمين الرقم</h1>
+    <p>اختر رقماً بين 1 و 10:</p>
+    <input type="number" id="guess" min="1" max="10">
+    <button onclick="checkNumber()">تحقق</button>
+    <p id="result"></p>
+    <a href="../index.html">العودة للرئيسية</a>
+
+    <script>
+        const number = Math.floor(Math.random() * 10) + 1;
+        function checkNumber() {
+            const guess = document.getElementById('guess').value;
+            const result = document.getElementById('result');
+            if(guess == number) result.textContent = "✅ صحيح!";
+            else result.textContent = "❌ حاول مرة أخرى!";
+        }
+    </script>
+</body>
+</html>
